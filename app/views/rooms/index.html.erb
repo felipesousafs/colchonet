@@ -1,13 +1,13 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Rooms</h1>
+<h1>Quartos</h1>
 
 <table>
   <thead>
     <tr>
-      <th>Title</th>
-      <th>Location</th>
-      <th>Description</th>
+      <th><%= t 'rooms.title' %></th>
+      <th><%= t 'rooms.location' %></th>
+      <th><%= t 'rooms.description' %></th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -18,9 +18,9 @@
         <td><%= room.title %></td>
         <td><%= room.location %></td>
         <td><%= room.description %></td>
-        <td><%= link_to 'Show', room %></td>
-        <td><%= link_to 'Edit', edit_room_path(room) %></td>
-        <td><%= link_to 'Destroy', room, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to t('links.view'), room %></td>
+        <td><%= link_to t('links.edit'), edit_room_path(room) %></td>
+        <td><%= link_to t('links.delete'), room, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -28,4 +28,4 @@
 
 <br>
 
-<%= link_to 'New Room', new_room_path %>
+<%= link_to t('links.new_rom'), new_room_path %>
