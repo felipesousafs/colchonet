@@ -5,9 +5,17 @@ class User < ActiveRecord::Base
   validates_format_of :email, :with => /\A[^@]+@([^@\.]+\.)+[^@\.]+\z/
   validates_uniqueness_of :email
 
+  scope :confirmed, -> {
+    where("confirmed_at IS NOT NULL")
+  }
+
   has_secure_password
 
   before_create :generate_token
+
+  def self.authenticate(email, password)
+    confirmed.find_by_email(email).try(:authenticate, password)
+  end
 
   def generate_token
     self.confirmation_token = SecureRandom.urlsafe_base64
