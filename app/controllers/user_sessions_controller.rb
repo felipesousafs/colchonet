@@ -1,4 +1,7 @@
 class UserSessionsController < ApplicationController
+  before_filter :require_no_authentication, :only => [:new, :create]
+  before_filter :require_authentication, :only => :destroy
+
   def new
     @session = UserSession.new(session)
   end
@@ -10,8 +13,10 @@ class UserSessionsController < ApplicationController
       render :new
     end
   end
-  def destroy
 
+  def destroy
+    user_session.destroy
+    redirect_to root_path, :notice => t('flash.notice.signed_out')
   end
 
   private

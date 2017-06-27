@@ -30,6 +30,8 @@ pt-BR:
     title: Título
     new:
       title: Cadastrar quarto
+    edit:
+      title: Editar quarto
   general:
     form_error: Há erros no formulário. Por favor, verifique.
   signup_mailer:
@@ -72,5 +74,15 @@ pt-BR:
       user_session:
         create: 'Entrar'
   flash:
+    alert:
+      needs_login: 'Você precisa efetuar login para acessar a página requisitada.'
     notice:
       signed_in: 'Login efetuado com sucesso'
+      signed_out: 'Logout efetuado com sucesso. Até logo! ;)'
+  layout:
+    new_room: 'Anunciar um quarto'
+    my_profile: 'Meu perfil'
+    signout: 'Sair'
+    rooms: 'Quartos'
+    signup: 'Cadastrar-se'
+    signin: 'Efetuar login'
