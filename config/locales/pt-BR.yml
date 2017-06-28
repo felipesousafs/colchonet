@@ -32,6 +32,8 @@ pt-BR:
       title: Cadastrar quarto
     edit:
       title: Editar quarto
+    index:
+      title: Lista de quartos
   general:
     form_error: Há erros no formulário. Por favor, verifique.
   signup_mailer:
