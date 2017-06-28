@@ -13,11 +13,7 @@ $success-text-color: #468847;
 }
 body { background-color: #d0d0d0; }
 
-@mixin shadow($color, $x, $y, $radius) {
--moz-box-shadow: $color $x $y $radius;
--webkit-box-shadow: $color $x $y $radius;
-box-shadow: $color $x $y $radius;
-}
+@import "shadow";
 
 header {
   @include shadow(#ccc, 0, 3px, 6px);

@@ -16,7 +16,7 @@ class RoomsController < ApplicationController
     @room = current_user.rooms.find(params[:id])
   end
   def create
-    @room = current_user.rooms.build(params[:room])
+    @room = current_user.rooms.build(room_params)
     if @room.save
       redirect_to @room, :notice => t('flash.notice.room_created')
     else
