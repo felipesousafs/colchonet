@@ -1,5 +1,6 @@
 class User < ActiveRecord::Base
-  has_many :rooms
+  has_many :rooms, :dependent => :destroy
+  has_many :reviews, :dependent => :destroy
 
   validates_presence_of :full_name, :email, :location
   validates_length_of :bio, :minimum => 30, :allow_blank => false

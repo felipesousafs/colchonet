@@ -17,18 +17,18 @@ body { background-color: #d0d0d0; }
 
 header {
   @include shadow(#ccc, 0, 3px, 6px);
-  border-bottom: 1px solid #686;
+  border-bottom: 1px solid #365988;
   margin-bottom: 15px;
   #header-wrap {
     width: $content-width;
     margin: 0 auto;
   }
   height: $header-height;
-  background-color: #9ECE71;
+  background-color: #5b88ce;
   h1 {
     float: left;
     a {
-      color: #333;
+      color: #112226;
       font-family: $serif-families;
       font-weight: 400;
       font-size: 2.5em;
@@ -44,7 +44,7 @@ header nav {
   float: right;
   li {
     display: inline;
-    background-color: #546f3c;
+    background-color: #43686f;
     padding: 7px 10px;
     -moz-border-radius: 5px;
     border-radius: 5px;
@@ -53,7 +53,7 @@ header nav {
       font-weight: 600;
       color: #fff;
       &:hover {
-        color: #d3ffbb;
+        color: #40EBFF;
       }
     }
   }
@@ -65,7 +65,7 @@ header nav {
   margin: 0 auto;
   h1 { font-size: 1.5em; }
   a, a:visited, a:hover {
-    color: #242;
+    color: #0e195d;
     &:hover { text-decoration: underline; }
   }
   ul, form, p {
